@@ -1,14 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+// TODO REPLOY_backend env var for host
+
+
 
 function App() {
+
+  const backendHost = process.env.REACT_APP_BACKEND;
+
+  const [serverBranch, setServerBranch] = useState('[loading]');
+
+  useEffect(() => {
+
+    axios.get(`${backendHost}/branch`)
+    .then(res => {
+      setServerBranch(res.data.branch);
+    });
+  }, [])
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          This react project is on the `main` branch
         </p>
+        <p>The server branch is on the {serverBranch} branch</p>
         <a
           className="App-link"
           href="https://reactjs.org"
