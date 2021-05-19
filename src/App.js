@@ -3,7 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const backendHost = process.env.REACT_APP_BACKEND;
+const backendHost = process.env.REACT_APP_REPLOY_BACKEND;
 
 function App() {
 
