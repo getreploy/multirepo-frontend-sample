@@ -23,7 +23,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This react project is on the `main` branch
+          This react project is on the `testing` branch
         </p>
         <p>The server branch is on the {serverBranch} branch</p>
         <a
