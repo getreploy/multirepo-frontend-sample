@@ -3,13 +3,9 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-// TODO REPLOY_backend env var for host
-
-
+const backendHost = process.env.REACT_APP_BACKEND;
 
 function App() {
-
-  const backendHost = process.env.REACT_APP_BACKEND;
 
   const [serverBranch, setServerBranch] = useState('[loading]');
 
